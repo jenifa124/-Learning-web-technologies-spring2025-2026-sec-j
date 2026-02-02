@@ -1,7 +1,5 @@
 Created a git repositorie name "learning-web-technologies-spring2025-2026-sec-j"
-
 configure using git Email and git User name
-
 Create a text file
-
 Push that text file with commit message "First Commit"
+.Create a html file name "index" then create a table with 4 column(NAME, ID, CGPA, EAMIL) and insert values.
