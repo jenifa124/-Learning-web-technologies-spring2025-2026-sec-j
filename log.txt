@@ -1,0 +1,7 @@
+Created a git repositorie name "learning-web-technologies-spring2025-2026-sec-j"
+
+configure using git Email and git User name
+
+Create a text file
+
+Push that text file with commit message "First Commit"
