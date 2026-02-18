@@ -1,1 +1,0 @@
-# -Learning-web-technologies-spring2025-2026-sec-j
