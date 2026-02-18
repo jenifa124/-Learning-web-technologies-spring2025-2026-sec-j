@@ -1,0 +1,40 @@
+<Admissions>
+
+    <Admission>
+        <sln>23</sln>
+        <fstName>John</fstName>
+        <lastName>Carter</lastName>
+        <admissionDate>
+        <day>25</day>
+        <month>12</month>
+        <year>2014</year>
+        </admissionDate>
+
+    </Admission>
+
+    <Admission>
+        <sln>29</sln>
+        <fstName>Bob</fstName>
+        <lastName>Marshal</lastName>
+        <admissionDate>
+        <day>13</day>
+        <month>01</month>
+        <year>1999</year>
+        </admissionDate>
+    </Admission>
+
+
+      <Admission>
+        <sln>35</sln>
+        <fstName>Clark</fstName>
+        <lastName>Kent</lastName>
+
+        <admissionDate>
+        <day>17</day>
+        <month>06</month>
+        <year>2005</year>
+        </admissionDate>
+        
+      </Admission>
+
+</Admissions>
