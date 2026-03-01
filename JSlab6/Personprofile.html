@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Person Profile</title>
+
+    <script>
+        function validate() {
+
+            // Name
+            var name = document.getElementById("name").value;
+            var namePattern = /^[A-Za-z][A-Za-z .-]* [A-Za-z .-]+$/;
+
+            if (name == "") {
+                alert("Name cannot be empty");
+                return false;
+            }
+            if (!namePattern.test(name)) {
+                alert("Invalid Name");
+                return false;
+            }
+
+            // Email
+            var email = document.getElementById("email").value;
+            var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if (email == "") {
+                alert("Email cannot be empty");
+                return false;
+            }
+            if (!emailPattern.test(email)) {
+                alert("Invalid Email");
+                return false;
+            }
+
+            // Gender
+            var gender = document.getElementsByName("gender");
+            var genderSelected = false;
+            for (var i = 0; i < gender.length; i++) {
+                if (gender[i].checked) {
+                    genderSelected = true;
+                }
+            }
+            if (!genderSelected) {
+                alert("Select Gender");
+                return false;
+            }
+
+            // Date of Birth
+            var day = document.getElementById("day").value;
+            var month = document.getElementById("month").value;
+            var year = document.getElementById("year").value;
+
+            if (day == "" || month == "" || year == "") {
+                alert("Date cannot be empty");
+                return false;
+            }
+
+            if (day < 1 || day > 31 || month < 1 || month > 12 || year < 1900 || year > 2016) {
+                alert("Invalid Date");
+                return false;
+            }
+
+            // Degree
+            var degree = document.getElementsByName("degree");
+            var degreeSelected = false;
+            for (var i = 0; i < degree.length; i++) {
+                if (degree[i].checked) {
+                    degreeSelected = true;
+                }
+            }
+            if (!degreeSelected) {
+                alert("Select at least one Degree");
+                return false;
+            }
+
+            // Blood Group
+            var blood = document.getElementById("blood").value;
+            if (blood == "") {
+                alert("Select Blood Group");
+                return false;
+            }
+
+            // Photo
+            var photo = document.getElementById("photo").value;
+            if (photo == "") {
+                alert("Photo cannot be empty");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+</head>
+
+<body style="background-color:#dcdcdc;">
+
+<br><br>
+
+<center>
+<table border="1" width="500" cellpadding="10" cellspacing="0" bgcolor="white">
+
+    <tr>
+        <th colspan="2"><h2>PERSON PROFILE</h2></th>
+    </tr>
+
+    <tr>
+        <td>Name</td>
+        <td><input type="text" id="name"></td>
+    </tr>
+
+    <tr>
+        <td>Email</td>
+        <td><input type="text" id="email"></td>
+    </tr>
+
+    <tr>
+        <td>Gender</td>
+        <td>
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+        </td>
+    </tr>
+
+    <tr>
+        <td>Date of Birth</td>
+        <td>
+            <input type="text" id="day" size="2"> /
+            <input type="text" id="month" size="2"> /
+            <input type="text" id="year" size="4">
+            (dd/mm/yyyy)
+        </td>
+    </tr>
+
+    <tr>
+        <td>Blood Group</td>
+        <td>
+            <select id="blood">
+                <option value="">Select</option>
+                <option>A+</option>
+                <option>B+</option>
+                <option>O+</option>
+                <option>AB+</option>
+                <option>O-</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Degree</td>
+        <td>
+            <input type="checkbox" name="degree"> SSC
+            <input type="checkbox" name="degree"> HSC
+            <input type="checkbox" name="degree"> BSc.
+            <input type="checkbox" name="degree"> MSc.
+        </td>
+    </tr>
+
+    <tr>
+        <td>Photo</td>
+        <td><input type="file" id="photo"></td>
+    </tr>
+
+    <tr>
+        <td colspan="2" align="center">
+            <br>
+            <input type="submit" value="Submit" onclick="return validate()">
+            <input type="reset" value="Reset">
+        </td>
+    </tr>
+
+</table>
+</center>
+
+</body>
+</html>

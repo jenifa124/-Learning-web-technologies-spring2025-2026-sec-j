@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Gender Validation</title>
+<script>
+function validate_Gender() {
+    var gender = document.getElementsByName("gender");
+    for (var i = 0; i < gender.length; i++) {
+        if (gender[i].checked) {
+            return true;
+        }
+    }
+    alert("Select a gender");
+    return false;
+}
+</script>
+</head>
+<body>
+
+<form onsubmit="return validate_Gender()">
+<input type="radio" name="gender"> Male
+<input type="radio" name="gender"> Female
+<input type="radio" name="gender"> Other
+<br><br>
+<input type="submit" value="Submit">
+</form>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>New Profile Validation</title>
+<script>
+function validate_Profile() {
+    var id = document.getElementById("userid").value;
+    var pic = document.getElementById("picture").value;
+
+    if (id == "" || id <= 0) {
+        alert("User ID must be positive number");
+        return false;
+    }
+
+    if (pic == "") {
+        alert("Picture must be selected");
+        return false;
+    }
+
+    return true;
+}
+</script>
+</head>
+<body>
+
+<form onsubmit="return validate_Profile()">
+User ID: <input type="number" id="userid"><br><br>
+Picture: <input type="file" id="picture"><br><br>
+<input type="submit" value="Submit">
+</form>
+    
+</body>
+</html>
