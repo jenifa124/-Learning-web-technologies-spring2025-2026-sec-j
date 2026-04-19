@@ -1,7 +1,9 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['users'])) {
-    $_SESSION['users'] = array();
-}
+$_SESSION['users']['jenifa'] = [
+    'name' => 'jenifa',
+    'password' => '123'
+];
+$_SESSION['logged_in'] = 'jenifa';
 ?>
