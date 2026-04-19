@@ -2,18 +2,14 @@
 session_start();
 
 
-if (!isset($_SESSION['users'])) {
-    $_SESSION['users'] = [];
-}
+$_SESSION['users']['jenifa'] = [
+    'name' => 'jenifa',
+    'email' => 'jenifa@gmail.com',
+    'gender' => 'Female',
+    'dob' => '01/01/2000',
+    'password' => '123',
+    'picture' => ''
+];
 
-if (!isset($_SESSION['users']['jenifa'])) {
-    $_SESSION['users']['jenifa'] = [
-        'name' => 'jenifa',
-        'password' => '123'
-    ];
-}
-
-
-if (!isset($_SESSION['logged_in'])) {
-    $_SESSION['logged_in'] = 'jenifa';
-}
+$_SESSION['logged_in'] = 'jenifa';
+?>
